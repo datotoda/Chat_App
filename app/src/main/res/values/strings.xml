@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Chat App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="registration">Registration</string>
+    <string name="forget_pass">Forget pass</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="reset_password">Reset password</string>
+    <string name="send_password_reset_email">Send password reset email</string>
+</resources>
