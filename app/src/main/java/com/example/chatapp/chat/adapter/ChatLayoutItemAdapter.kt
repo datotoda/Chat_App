@@ -14,7 +14,7 @@ import com.example.chatapp.chat.model.ChatLayout
 import kotlinx.android.synthetic.main.chat_list_item.view.*
 
 class ChatLayoutItemAdapter (private val context: Context,
-                             private val dataSet: List<ChatLayout>): RecyclerView.Adapter<ChatLayoutItemAdapter.ItemViewHolder>(){
+                             private val dataSet: ArrayList<ChatLayout>): RecyclerView.Adapter<ChatLayoutItemAdapter.ItemViewHolder>(){
 
     class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
         val chatListItemNameTextView: TextView = view.chatListItemNameTextView
