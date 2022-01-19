@@ -39,6 +39,7 @@ class ChatLayoutItemAdapter (private val context: Context,
         Glide.with(context)
             .load(item.profilePictureUrl)
             .centerCrop()
+            .circleCrop()
             .into(holder.chatListItemProfileImageView)
     }
 
