@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.chatapp.R
@@ -41,6 +43,10 @@ class ChatLayoutItemAdapter (private val context: Context,
             .centerCrop()
             .circleCrop()
             .into(holder.chatListItemProfileImageView)
+
+        holder.itemView.setOnClickListener {
+            holder.itemView.findNavController().navigate(R.id.action_chatListFragment_to_chatFragment)
+        }
     }
 
     override fun getItemCount(): Int = dataSet.size

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.ChatFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chatLinearLayout"
+        tools:listitem="@layout/chat_message_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/chatLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/browser_actions_bg_grey">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:id="@+id/chatMessageEditText"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:maxLines="7"
+
+            tools:ignore="TextContrastCheck"
+            tools:text="Some message"
+            android:importantForAutofill="no" />
+
+
+        <ImageButton
+            android:id="@+id/chatSendImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_send"
+            android:backgroundTint="#89BAD5"
+            />
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+<!--<com.google.android.material.textfield.TextInputLayout-->
+<!--android:layout_width="0dp"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:padding="8dp"-->
+<!--android:labelFor="@id/chatMessageEditText"-->
+<!--android:layout_weight="1">-->
+
+<!--<EditText-->
+<!--    android:id="@+id/chatMessageEditText"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:ems="10"-->
+<!--    android:inputType="text"-->
+
+<!--    tools:ignore="TextContrastCheck"-->
+<!--    tools:text="Name"-->
+<!--    android:importantForAutofill="no" />-->
+
+<!--</com.google.android.material.textfield.TextInputLayout>-->
