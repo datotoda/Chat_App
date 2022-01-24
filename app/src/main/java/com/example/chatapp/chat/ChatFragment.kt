@@ -18,11 +18,11 @@ import kotlinx.android.synthetic.main.fragment_chat_list.view.ChatListRecyclerVi
 class ChatFragment : Fragment() {
 
     val chat = Chat(mutableListOf(
-        mapOf("giorgi" to "how are you?"),
-        mapOf("giorgi" to "i'am fine"),
-        mapOf("me" to "how are you?"),
-        mapOf("me" to "Hi"),
         mapOf("giorgi" to "Hello"),
+        mapOf("me" to "Hi"),
+        mapOf("me" to "how are you?"),
+        mapOf("giorgi" to "i'am fine"),
+        mapOf("giorgi" to "how are you?"),
     ))
 
     private lateinit var adapter: ChatMessageItemAdapter
@@ -39,7 +39,7 @@ class ChatFragment : Fragment() {
         view.chatRecyclerView.adapter = adapter
         val layoutManager = LinearLayoutManager(context)
 
-        layoutManager.reverseLayout = true
+        layoutManager.stackFromEnd = true
         view.chatRecyclerView.layoutManager = layoutManager
         view.chatRecyclerView.setHasFixedSize(true)
 
@@ -51,11 +51,11 @@ class ChatFragment : Fragment() {
     private fun send() {
         val view = requireView()
         val editText = view.chatMessageEditText
-        if (editText.text.isNotEmpty()){
+        if (editText.text.toString() != ""){
             chat.addMessage("me", editText.text.toString())
             editText.setText("")
-            adapter.notifyItemInserted(0)
-            view.chatRecyclerView.smoothScrollToPosition(0)
+            adapter.notifyItemInserted(chat.messages.size)
+            view.chatRecyclerView.smoothScrollToPosition(chat.messages.size)
         }
 
     }
