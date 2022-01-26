@@ -26,6 +26,7 @@ class ChatMessageItemAdapter (private val context: Context,
         val chatLeftMessageItemTextTextView: TextView = view.chatLeftMessageItemTextTextView
         val chatLeftMessageItemCardView: CardView = view.chatLeftMessageItemCardView
         val chatRightMessageItemTextTextView: TextView = view.chatRightMessageItemTextTextView
+        val chatTimeTextView: TextView = view.chatTimeTextView
         val chatRightMessageItemCardView: CardView = view.chatRightMessageItemCardView
 
     }
@@ -46,6 +47,7 @@ class ChatMessageItemAdapter (private val context: Context,
 //            holder.chatRightMessageItemCardView.width holder.itemView.width
             holder.chatLeftMessageItemCardView.isVisible = false
             holder.chatMessageItemProfileImageView.isVisible = false
+            holder.chatTimeTextView.isVisible = false
         } else {
             Glide.with(context)
                 .load("https://randomuser.me/api/portraits/men/20.jpg")

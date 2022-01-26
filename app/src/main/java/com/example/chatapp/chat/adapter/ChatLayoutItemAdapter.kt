@@ -21,6 +21,7 @@ class ChatLayoutItemAdapter (private val context: Context,
     class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
         val chatListItemNameTextView: TextView = view.chatListItemNameTextView
         val chatListItemTextTextView: TextView = view.chatListItemTextTextView
+        val chatListTimeTextView: TextView = view.chatListTimeTextView
         val chatListItemProfileImageView: ImageView = view.chatListItemProfileImageView
 
     }
@@ -37,6 +38,7 @@ class ChatLayoutItemAdapter (private val context: Context,
 
         holder.chatListItemNameTextView.text = item.personName
         holder.chatListItemTextTextView.text = item.personLastChat
+        holder.chatListTimeTextView.text = "${(1..23).random()}:${(10..59).random()}"
 
         Glide.with(context)
             .load(item.profilePictureUrl)

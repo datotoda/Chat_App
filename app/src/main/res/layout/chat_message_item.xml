@@ -9,9 +9,9 @@
         android:id="@+id/chatMessageItemProfileImageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_margin="10dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,17 +26,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
+        app:cardElevation="2dp"
         app:contentPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/chatMessageItemProfileImageView"
         app:layout_constraintTop_toTopOf="parent">
-    <TextView
-        android:id="@+id/chatLeftMessageItemTextTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxWidth="300dp"
-        tools:text="you: hello!" />
+
+        <TextView
+            android:id="@+id/chatLeftMessageItemTextTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="300dp"
+            tools:text="you: hello!" />
     </androidx.cardview.widget.CardView>
 
 
@@ -45,10 +46,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:backgroundTint="#89BAD5"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
         app:contentPadding="10dp"
-        android:backgroundTint="#89BAD5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -60,6 +61,18 @@
             android:maxWidth="300dp"
             tools:text="you: hello!" />
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/chatTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:text="18:15"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chatLeftMessageItemCardView"
+        app:layout_constraintTop_toBottomOf="@+id/chatLeftMessageItemCardView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
